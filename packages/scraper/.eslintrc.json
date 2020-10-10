@@ -1,0 +1,64 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "env": { "node": true, "es6": true, "jest": true },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "none"
+      }
+    ],
+    "prettier/prettier": "error",
+    "no-console": "warn",
+    "default-case": "off",
+    "no-unused-vars": ["error", { "args": "after-used" }],
+    "no-return-await": "warn",
+    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["types", "./types"],
+          ["src", "./src"]
+        ],
+        "extensions": [".ts", ".js", ".json"]
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "include": ["./src/**/*", "./types/**/*"],
+  "exclude": ["node_modules/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "lib-ts",
+    "strict": true,
+    "sourceMap": true,
+    "incremental": true,
+    "declaration": true,
+    "skipLibCheck": false,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "src": ["src/*"],
+      "types": ["types/*"]
+    }
+  }
+}
