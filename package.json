@@ -1,6 +1,10 @@
 {
   "name": "off-radio-project",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ochmanski/off-radio"
+  },
   "devDependencies": {
     "lerna": "^3.22.1"
   }
