@@ -2,7 +2,7 @@
   "include": ["./src/**/*", "./types/**/*"],
   "exclude": ["node_modules/*"],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
@@ -15,9 +15,9 @@
     "noImplicitAny": false,
     "esModuleInterop": true,
     "strictNullChecks": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "src": ["src/*"],
       "types": ["types/*"]
     }
   }

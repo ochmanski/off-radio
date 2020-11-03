@@ -52,13 +52,14 @@
       "@typescript-eslint/parser": [".ts"]
     },
     "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"],
+        "extensions": [".ts", ".json"]
+      },
       "alias": {
-        "map": [
-          ["types", "./types"],
-          ["src", "./src"]
-        ],
-        "extensions": [".ts", ".js", ".json"]
+        "map": [["types", "./types"]]
       }
     }
-  }
+  },
+  "ignorePatterns": ["dist/*", "lib-ts/*"]
 }
